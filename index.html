@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alhassan Alsaggaf — Portfolio</title>
+  <meta name="description" content="Portfolio of Alhassan Alsaggaf — Electrical & Computer Engineering student focused on embedded systems, control, DSP, and AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* palette */
+      --bg:#202d3c;                       /* page background */
+      --panel:lab(79.79% -1.82 -2.34);   /* light cream panel */
+      --muted:#e2e6ed;                    /* muted text (darkened for contrast) */
+      --text:#c6c4d1;                     /* primary text */
+      --brand:#0a2a46;                    /* brand */
+      --accent:#cdd3d6;                   /* button text */
+      --heading:lab(45.21% -2.43 -10.97);  /* headings */
+      --max:1100px;
+      --ring:0 0 0 3px rgba(10, 42, 70, .18);
+      --border:1px solid rgba(0, 0, 0, .18);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--brand);text-decoration:none}
+    img{max-width:100%;display:block}
+
+    /* Header */
+    .site-header{position:sticky;top:0;background:rgba(32,45,60,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08);z-index:20}
+    .nav{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+    .brand{font-weight:800;letter-spacing:.2px;color:#ffffff}
+    .nav-links a{margin-left:18px;color:#ffffff;opacity:.9}
+
+    /* Buttons */
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;background:var(--brand);color:#fff;font-weight:600;border:var(--border)}
+    .btn:focus{outline:none;box-shadow:var(--ring)}
+
+    /* Layout Helpers */
+    .section{max-width:var(--max);margin:22px auto;padding:36px 18px}
+    .section h2{font-size:28px;margin:0 0 18px;color:var(--heading)}
+    h3{color:var(--heading);margin:4px 0 8px}
+    p{margin:0 0 10px}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(12,1fr)}
+    .col-12{grid-column:span 12}
+    .col-8{grid-column:span 8}
+    .col-6{grid-column:span 6}
+    .col-4{grid-column:span 4}
+
+    /* Panels & Cards */
+    .panel{background:var(--panel);border:var(--border);border-radius:16px;padding:18px}
+    .card{background:var(--panel);border:var(--border);border-radius:16px;padding:18px}
+    .card.border-left{border-left:6px solid #293644}
+
+    .muted{color:var(--muted)}
+
+    /* HERO — now uses the same panel design as sections below */
+    .hero{max-width:var(--max);margin:40px auto;padding:24px 18px}
+    .hero .panel{padding:28px}
+    .hero-grid{display:grid;grid-template-columns:140px 1fr;gap:18px;align-items:center}
+    .hero h1{font-size:clamp(28px,3.4vw,46px);line-height:1.15;margin:0;color:var(--brand)}
+    .hero p{color:#10142d;margin:6px 0 16px;font-weight:500}
+    .hero-img{width:140px;height:140px;object-fit:cover;border-radius:16px;border:4px solid #000000;box-shadow:0 0 15px rgba(84,113,84,.2)}
+
+    /* About chips */
+    .kudos{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .kudos span{background:#e9edf2;border-radius:999px;padding:6px 10px;font-size:13px;color:#0b1b2a;border:1px solid rgba(0,0,0,.08)}
+
+    /* Footer */
+    .site-footer{color:#e9f3e5;padding:20px 12px;border-top:1px solid rgba(255,255,255,.06);text-align:center}
+
+    @media(max-width:960px){
+      .col-8,.col-6,.col-4{grid-column:span 12}
+      .nav-links{display:none}
+      .hero-grid{grid-template-columns:1fr;justify-items:center;text-align:center}
+      .hero h1{margin-top:6px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top">Alahhasan Alsaggaf</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#courses">Courses</a>
+        <a href="#labs">Labs</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO (panel style like the sections below) -->
+    <section class="hero">
+      <div class="panel">
+        <div class="hero-grid">
+          <img class="hero-img" src="amrop.jpg.png" alt="Portrait of Amro Abdulnaser Yousef" loading="lazy" />
+          <div>
+            <h1>Alahhasan Alsaggaf</h1>
+            <p class="muted">Electrical & Computer Engineering student with a builder’s mindset — turning ideas into working prototypes across embedded systems, control, DSP, and AI.</p>
+            <a class="btn" href="#projects">View My Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    
+<section id="about" class="section about">
+<h2>About Me</h2>
+<div class="panel">
+<p class="lead">
+ <strong></strong> — I’m Alhassan an ECE student in Jeddah who loves building dependable hardware–software systems. I work at the point where
+microcontrollers, sensors, and control algorithms meet data and signal processing to turn ideas into working prototypes.
+</p>
+<div class="kudos">
+<span>Embedded C/C++</span>
+<span>Arduino & Raspberry Pi</span>
+<span>MATLAB/Simulink</span>
+<span>PID & State‑Space</span>
+<span>DSP (MFCC, Filters)</span>
+<span>Python & scikit‑learn</span>
+<span>PCB/Prototyping</span>
+</div>
+</div>
+</section>
+ <!-- EDUCATION -->
+    <section id="education" class="section" style="margin-bottom: 6px;">
+      <h2>Education</h2>
+      <div class="card border-left" style="margin-bottom: 18px;">
+        <h3>Bachelors in Electrical & Computer Engineering</h3>
+        <p class="muted">Effat University — Jeddah, Saudi Arabia
+            <p></p> (2022-2027)</p>
+        <ul class="muted">
+          <li>Focus: Embedded systems, control, signal processing, and data‑driven engineering.</li>
+          <li>Hands‑on work spanning robotics, DSP, and IoT prototypes.</li>
+        </ul>
+      </div>
+      <div class="card border-left" style="margin-bottom: 18px;">
+        <h3>High School Diploma</h3>
+        <p class="muted">Dar al theker — Jeddah, Saudi Arabia</p>
+        (2018-2020)
+        <ul class="muted">
+          <li>Honors track with leadership roles in STEM activities.</li>
+            <li>Strong academic background complemented by leadership in science, technology, and engineering initiatives.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS moved up for priority -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="grid">
+        <!-- Autonomous Robot Car -->
+        <div class="col-6 card border-left">
+          <h3>Autonomous Robot Car (Arduino)</h3>
+          <p class="muted">
+            Multi‑mode robot: line following, obstacle avoidance, and basic pick‑and‑place via servo gripper. IR and ultrasonic sensors feed a
+            lightweight decision loop; PID smooths motion and corners.
+          </p>
+          <ul class="muted">
+            <li><strong>Skills:</strong> Sensor fusion, PWM motor control, embedded C.</li>
+            <li><strong>Tools:</strong> Arduino IDE, Proteus, SolidWorks.</li>
+            <li><strong>Result:</strong> Stable path tracking and responsive avoidance at classroom speeds.</li>
+          </ul>
+          <a class="btn" href="circuit_2_report[1][1].docx" target="_blank">View Project</a>
+        </div>
+
+        <!-- FPGA vs ASIC -->
+        <div class="col-6 card border-left">
+          <h3>FPGA vs ASIC for Satellite Systems</h3>
+          <p class="muted">
+            Comparative study of compute platforms for on‑orbit workloads, weighing flexibility, latency, power, and NRE cost under space constraints.
+          </p>
+          <ul class="muted">
+            <li><strong>Skills:</strong> Architecture analysis, power/latency estimation, modeling.</li>
+            <li><strong>Tools:</strong> MATLAB, Xilinx Vivado, ModelSim.</li>
+            <li><strong>Insight:</strong> FPGAs excel for rapid iteration and adaptive missions; ASICs win on volume and minimum power.
+          </ul>
+          <a class="btn" href="Literature Review FPGA vs ASIC on Satellite embeded sys (3).docx" target="_blank">View Project</a>
+        </div>
+
+        <!-- Smart Irrigation -->
+        <div class="col-6 card border-left">
+          <h3>Smart Irrigation System (IoT)</h3>
+          <p class="muted">
+            Raspberry Pi gateway with soil‑moisture/temperature sensing, on‑device rules, and a lightweight cloud dashboard for monitoring and control.
+          </p>
+          <ul class="muted">
+            <li><strong>Skills:</strong> IoT architecture, sensor calibration, Python automation.</li>
+            <li><strong>Tools:</strong> Raspberry Pi 4, Python, ThingSpeak API, Node‑RED.</li>
+            <li><strong>Impact:</strong> Reduced water usage by ~30% while maintaining target soil humidity.</li>
+          </ul>
+          <a class="btn" href="Survey on Raspberry Pi and Arduino (2) (1) (1).docx" target="_blank">View Project</a>
+        </div>
+
+        <!-- Voice-Based Disease Detection -->
+        <div class="col-6 card border-left">
+          <h3>Voice‑Based Disease Detection</h3>
+          <p class="muted">
+            DSP + ML pipeline on speech recordings (MFCCs, spectral entropy) with classical classifiers to separate healthy vs. abnormal samples.
+          </p>
+          <ul class="muted">
+            <li><strong>Skills:</strong> Feature engineering, SVM/Random Forest, data balancing.</li>
+            <li><strong>Tools:</strong> MATLAB, Python (Librosa, scikit‑learn), Audacity.</li>
+            <li><strong>Outcome:</strong> Achieved ~92% accuracy with an interpretable tree model.</li>
+          </ul>
+          <a class="btn" href="Signal_matlab_project (1).pdf" target="_blank">View Project</a>
+        </div>
+
+        <!-- Solar I-V Analysis -->
+        <div class="col-6 card border-left">
+          <h3>Solar Panel I–V Curve Analysis</h3>
+          <p class="muted">
+            Simulated PV I–V and P–V curves across irradiance/temperature sweeps; computed MPP and efficiency trends and discussed MPPT approaches.
+          </p>
+          <ul class="muted">
+            <li><strong>Skills:</strong> Circuit modeling, MPPT concepts, data analysis.</li>
+            <li><strong>Tools:</strong> MATLAB/Simulink; Excel for visualization.</li>
+            <li><strong>Result:</strong> Verified non‑linear characteristics and identified optimal operating points.</li>
+          </ul>
+          <a class="btn" href="I-V Curve Report (1).docx" target="_blank">View Project</a>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <!-- COURSES -->
+    <section id="courses" class="section">
+      <h2>University Courses & Course Projects</h2>
+      <div class="grid">
+        <div class="col-6 card border-left">
+          <h3>Analog & Modern Control</h3>
+          <p class="muted">Transfer functions, root‑locus, frequency response, Routh‑Hurwitz, state feedback, observers.</p>
+          <ul class="muted">
+            <li><strong>Tools:</strong> MATLAB/Simulink for modeling and controller tuning.</li>
+            <li><strong>Mini‑project:</strong> Closed‑loop control for a second‑order plant.</li>
+          </ul>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>Digital Signal Processing / Signals & Systems</h3>
+          <p class="muted">Fourier/Laplace/Z‑transforms, sampling, FIR/IIR filters, spectral analysis, LTI systems.</p>
+          <ul class="muted">
+            <li><strong>Project:</strong> Speech feature extraction and simple classifier evaluation.</li>
+          </ul>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>Digital Logic Design</h3>
+          <p class="muted">Combinational & sequential logic, K‑maps, FSMs, FPGA basics.</p>
+          <ul class="muted">
+            <li><strong>Build:</strong> LED sequencer with counters/FSM on PL.</li>
+          </ul>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>Computer Organization & Architecture</h3>
+          <p class="muted">Datapath/control, memory hierarchy, ISA, basic pipelining.</p>
+          <ul class="muted">
+            <li><strong>Study:</strong> FPGA vs ASIC trade‑offs for satellite subsystems.</li>
+          </ul>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>Microprocessor Systems & Circuits II</h3>
+          <p class="muted">MCU programming (timers/PWM/interrupts); sensor interfacing and analog circuits.</p>
+          <ul class="muted">
+            <li><strong>Build:</strong> DIY robotic arm for pick‑and‑place tasks.</li>
+          </ul>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>Principles of Computing (Python)</h3>
+          <p class="muted">Algorithmic thinking, data structures, and clean coding.</p>
+          <ul class="muted">
+            <li><strong>Project:</strong> Sensor‑driven control simulation with logging.</li>
+          </ul>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>C++ Programming</h3>
+          <p class="muted">I/O, functions, arrays/vectors, pointers, and basic OOP.</p>
+          <ul class="muted">
+            <li><strong>Mini‑project:</strong> PV I–V curve simulator.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- LABS -->
+    <section id="labs" class="section">
+      <h2>AI Labs</h2>
+      <div class="grid">
+        <div class="col-6 card border-left">
+          <h3>Lab 1 — IMDB Dataset Exploration</h3>
+          <p class="muted">I explored the IMDB movie dataset to understand the basics of data preprocessing and visualization. I cleaned the data, handled missing values, and analyzed relationships between genres, ratings, and release years using Python and pandas. This lab strengthened my foundation in data analysis and trend identification.</p>
+          <ul class="muted">
+            <li>Stack: Python, pandas, matplotlib</li>
+            <li>Skills: Filtering, visualization, summary statistics</li>
+          </ul>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>Lab 2 — End‑to‑End DS Workflow</h3>
+          <p class="muted">This lab focused on applying the full data science pipeline — from data transformation to model training and evaluation. I implemented feature encoding, normalization, and built classification models using scikit-learn. It improved my understanding of how machine learning models are trained, tested, and optimized for better accuracy.</p>
+          <ul class="muted">
+            <li>Stack: Python, scikit‑learn, pandas</li>
+            <li>Skills: Train/test split, metrics, model selection</li>
+          </ul>
+        </div>
+        <div class="col-6 card border-left">
+          <h3>Lab 3 — Weather Classification</h3>
+          <p class="muted">In the lab 3, I used machine learning algorithms like Decision Trees and Random Forests to predict weather conditions based on temperature, humidity, and wind speed. The project enhanced my skills in feature analysis, model evaluation, and data visualization while linking AI concepts to real-world forecasting.</p>
+          <ul class="muted">
+            <li>Stack: Python, scikit‑learn, matplotlib</li>
+            <li>Skills: Model comparison, visualization, interpretation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="panel">
+        <p>Email: <a href="mailto:al7asan.sgf@gmail.com">al7asan.sgf@gmail.com</a></p>
+        <p class="muted">Phone: +966 570 622 164</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>©️ <span id="y"></span> Alhassan Alsaggaf — Portfolio</p>
+  </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
